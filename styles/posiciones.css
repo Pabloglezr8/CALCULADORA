@@ -1,0 +1,59 @@
+.screen{
+    position: absolute;
+    top:20px;
+}
+
+.operation {
+    position: absolute;
+    top: 120px;
+}
+
+.fila1{
+    position: absolute;
+    top: 610px;
+}
+
+.fila2{
+    position: absolute;
+    top: 510px;
+}
+
+.fila3{
+    position: absolute;
+    top: 410px;
+}
+
+.fila4{
+    position: absolute;
+    top: 310px;
+}
+
+.fila5{
+    position: absolute;
+    top: 240px;
+}
+
+.fila6{
+    position: absolute;
+    top: 170px;
+}
+
+.columna1{
+
+    left: 110px;
+}
+
+.columna2{
+
+    left: 10px;
+}
+
+.columna3{
+
+    left: -93px;
+}
+
+.columna4{
+
+    left: -193px;
+}
