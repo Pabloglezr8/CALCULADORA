@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/posiciones.css">
+    <link rel="icon" href="/icons/calculadora.ico" type="image/ico">
+</head>
+
+<body style=" display: flex; justify-content: center; background: linear-gradient(45deg, #FFE53B, #00FFFF) ;">
+    <div class="carcasa">
+    <div class="fila1">
+        <button class="tecla columna1 iqual" id="iqual">=</button>
+
+        <button class="tecla columna2 numbers">,</button>
+
+        <button class="tecla columna3 numbers">0</button>
+
+        <button class="tecla columna4 numbers">+/-</button>
+    </div>
+
+    <div class="fila2">
+        <button class="tecla columna1 operator">+</button>
+
+        <button class="tecla columna2 numbers">3</button>
+
+        <button class="tecla columna3 numbers">2</button>
+
+        <button class="tecla columna4 numbers">1</button>
+    </div>
+
+    <div class="fila3">
+        <button class="tecla columna1 operator">-</button>
+
+        <button class="tecla columna2 numbers">6</button>
+
+        <button class="tecla columna3 numbers">5</button>
+
+        <button class="tecla columna4 numbers">4</button>
+    </div>
+
+    <div class="fila4">
+        <button class="tecla columna1 operator">*</button>
+
+        <button class="tecla columna2 numbers">9</button>
+
+        <button class="tecla columna3 numbers">8</button>
+
+        <button class="tecla columna4 numbers">7</button>
+    </div>
+
+    <div class="fila5">
+        <button class="tecla2 columna1 operator">/</button>
+
+        <button class="tecla2 columna2">√</button>
+
+        <button class="tecla2 columna3">X²</button>
+
+        <button class="tecla2 columna4"> ½</button>
+    </div>
+
+    <div class="fila6">
+        <button class="tecla2 columna1" id="del">DEL</button><!-- ⌦ -->
+
+        <button class="tecla2 columna2">C</button>
+
+        <button class="tecla2 columna3">CE</button>
+
+        <button class="tecla2 columna4">%</button>
+    </div>
+    <div class="screen" id="screen">0
+        <div class="operation" id="operation"></div>
+    </div>
+</div>
+<script src="/scripts/index.js"></script>
+
+
+</body>
+
+</html>
