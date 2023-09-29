@@ -8,13 +8,6 @@ const numbers = document.querySelectorAll(".numbers");
 
 const operators = document.querySelectorAll(".operator");
 
-const iqual = document.getElementById("iqual");
-
-const del = document.getElementById("del");
-
-const c = document.getElementById("c");
-
-const ce = document.getElementById("ce");
 
 
 c.addEventListener("click", () => {
@@ -65,7 +58,6 @@ iqual.addEventListener("click", () => {
         const result = Number(eval(expresion).toFixed(2));
         screen.textContent = result;
         expresion = result.toString();// Actualizamos la expresión con el resultado
-        expresion = "";
         console.log(screen.textContent);
     } catch (error) {
         screen.textContent = "Error";
@@ -75,6 +67,17 @@ iqual.addEventListener("click", () => {
 porcent.addEventListener("click", () => {
     try {
         const result = Number(eval(expresion) / 100);
+        expresion = result.toString();
+        screen.textContent = expresion;
+    } catch (error) {
+        screen.textContent = "Error";
+    }
+});
+
+
+exponential.addEventListener("click", () =>{
+    try {
+        const result = Number(eval(Math.pow(expresion,2)));
         expresion = result.toString();
         screen.textContent = expresion;
     } catch (error) {
