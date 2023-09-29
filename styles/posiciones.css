@@ -1,11 +1,13 @@
 .screen{
     position: absolute;
-    top:20px;
+    top: 10px;
+    left: 15px;
 }
 
 .operation {
     position: absolute;
-    top: 120px;
+    top: 110px;
+    right: 20px;
 }
 
 .fila1{
@@ -40,20 +42,20 @@
 
 .columna1{
 
-    left: 110px;
+    left: 325px;
 }
 
 .columna2{
 
-    left: 10px;
+    left: 224px;
 }
 
 .columna3{
 
-    left: -93px;
+    left: 121px;
 }
 
 .columna4{
 
-    left: -193px;
+    left: 15px;
 }
