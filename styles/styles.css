@@ -22,7 +22,7 @@ body{
     position: relative;
     top: 100px;
     background-color: rgb(100, 98, 98, 0.7);
-    border-radius: 5px;
+    border-radius: 20px;
     width: 420px;
     height: 705px;
 
@@ -32,7 +32,7 @@ body{
     text-align: right;
     font-family:digit;
     font-size: 100px;
-    border-radius: 5px;
+    border-radius: 20px;
     border: solid;
     width: 385px;
     height: 140px;
@@ -73,7 +73,7 @@ body{
     font-family: Verdana;
     font-size: x-large;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 80px;
     height: 80px;
     position: absolute;
@@ -93,7 +93,7 @@ body{
     font-family: Verdana;
     font-size: x-large;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
     width: 80px;
     height: 50px;
     position: absolute;

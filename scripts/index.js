@@ -9,7 +9,6 @@ const numbers = document.querySelectorAll(".numbers");
 const operators = document.querySelectorAll(".operator");
 
 
-
 c.addEventListener("click", () => {
     if (expresion.length > 0) {
         expresion = expresion.slice(0, -1);
@@ -68,19 +67,41 @@ porcent.addEventListener("click", () => {
     try {
         const result = Number(eval(expresion) / 100);
         expresion = result.toString();
-        screen.textContent = expresion;
+        screen.textContent = result;
     } catch (error) {
         screen.textContent = "Error";
     }
 });
 
 
-exponential.addEventListener("click", () =>{
+exp.addEventListener("click", () =>{
     try {
         const result = Number(eval(Math.pow(expresion,2)));
         expresion = result.toString();
-        screen.textContent = expresion;
+        screen.textContent = result;
     } catch (error) {
+        screen.textContent = "Error";
+    }
+});
+
+raiz.addEventListener("click", () => {
+    try {
+        const result = Number(eval(Math.sqrt(expresion)));
+        expresion = result.toString();
+        screen.textContent = result;
+    } catch (error) {
+        // Maneja errores si la expresión no es válida
+        screen.textContent = "Error";
+    }
+});
+
+signe.addEventListener("click", () => {
+    try {
+        const result = Number(-1 * eval(expresion));
+        expresion = result.toString();
+        screen.textContent = result;
+    } catch (error) {
+        // Maneja errores si la expresión no es válida
         screen.textContent = "Error";
     }
 });
