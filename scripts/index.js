@@ -105,3 +105,14 @@ signe.addEventListener("click", () => {
         screen.textContent = "Error";
     }
 });
+
+divi.addEventListener("click", () => {
+    try{
+        const result = Number(1 / eval(expresion));
+        expresion = result.toString();
+        screen.textContent = result;
+    } catch (error){
+        screen.textContent0 = "Error";
+    }
+
+});
