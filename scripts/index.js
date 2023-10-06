@@ -97,11 +97,11 @@ raiz.addEventListener("click", () => {
 
 signe.addEventListener("click", () => {
     try {
-        const result = Number(-1 * eval(expresion));
+        const number = Number(expresion);
+        const result = -1 * number;
         expresion = result.toString();
         screen.textContent = result;
     } catch (error) {
-        // Maneja errores si la expresión no es válida
         screen.textContent = "Error";
     }
 });
