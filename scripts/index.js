@@ -1,12 +1,33 @@
-let expresion = "";
+let expresion = "";// alamcenamos las operaciones
+let result = "";// resultado de las operaciones
+let op = false;
 
-const screen = document.getElementById("screen");
+const screen = document.getElementById("screen");// pantalla resultado
 
-const operation = document.getElementById("operation");
+const operation = document.getElementById("operation");// pantalla donde aparece la operación
 
-const numbers = document.querySelectorAll(".numbers");
+const numbers = document.querySelectorAll(".numbers");// boton de numeros
 
-const operators = document.querySelectorAll(".operator");
+const operators = document.querySelectorAll(".operator");// boton de operaciones +  -  *  /
+
+
+const c = document.getElementById("c");// boton C
+
+const pi = document.getElementById("pi");// boton π 
+
+const del = document.getElementById("del");// boton ⌫
+
+const iqual = document.getElementById("iqual");// boton =
+
+const porcent = document.getElementById("porcent");// boton %
+
+const exp = document.getElementById("exp");// boton X²
+
+const raiz = document.getElementById("raiz");// boton √
+
+const signe = document.getElementById("signe");// boton +/-
+
+const divi = document.getElementById("divi");// boton 1/x
 
 
 c.addEventListener("click", () => {
@@ -18,46 +39,45 @@ c.addEventListener("click", () => {
     }
 });
 
-ce.addEventListener("click", () => {
-    if (expresion.length > 0) {
-        expresion = expresion.slice(0, -1);
-        operation.textContent = expresion;
+pi.addEventListener("click", () => {
+    expresion += "3.14";
+    operation.textContent = expresion;
 
-        open.log(expresion.textContent);
-    }
+    console.log(operation.textContent);
 });
 
 del.addEventListener("click", () => {
-    screen.textContent = "0"; // Borramos el resultado de la pantalla "screen"
-    expresion = ""; // Reiniciamos la expresión
-    operation.textContent = ""; // Borramos la operación en "operation"
-    calculator = false;
+    screen.textContent = "0";
+    expresion = ""; 
+    operation.textContent = ""; 
+    result = "";
 });
 
 operators.forEach((operator) => {
     operator.addEventListener("click", () => {
-        expresion += operator.textContent; // Concatenamos el número
+        expresion += operator.textContent; 
         operation.textContent = expresion;
 
-        console.log(operation.textContent); // Mostramos la expresión en la pantalla
+        console.log(operation.textContent); 
     });
 });
 
 numbers.forEach((numbers) => {
     numbers.addEventListener("click", () => {
-        expresion += numbers.textContent; // Concatenamos el número
+        expresion += numbers.textContent; 
         operation.textContent = expresion;
 
-        console.log(operation.textContent); // Mostramos la expresión en la pantalla
+        console.log(operation.textContent); 
     });
 });
 
 iqual.addEventListener("click", () => {
     try {
-        const result = Number(eval(expresion).toFixed(2));
+        result = Number(eval(expresion).toFixed(2));
         screen.textContent = result;
-        expresion = result.toString();// Actualizamos la expresión con el resultado
+        expresion = result.toString();
         console.log(screen.textContent);
+
     } catch (error) {
         screen.textContent = "Error";
     }
@@ -65,7 +85,7 @@ iqual.addEventListener("click", () => {
 
 porcent.addEventListener("click", () => {
     try {
-        const result = Number(eval(expresion) / 100);
+        result = Number(eval(expresion) / 100);
         expresion = result.toString();
         screen.textContent = result;
     } catch (error) {
@@ -74,9 +94,10 @@ porcent.addEventListener("click", () => {
 });
 
 
-exp.addEventListener("click", () =>{
+exp.addEventListener("click", () => {
     try {
-        const result = Number(eval(Math.pow(expresion,2)));
+        result = Number(eval(Math.pow(expresion, 2)));
+        operation.textContent = "sqr(" + expresion + ")";
         expresion = result.toString();
         screen.textContent = result;
     } catch (error) {
@@ -86,11 +107,11 @@ exp.addEventListener("click", () =>{
 
 raiz.addEventListener("click", () => {
     try {
-        const result = Number(eval(Math.sqrt(expresion)));
+        result = Number(eval(Math.sqrt(expresion)));
+        operation.textContent = "√(" + expresion + ")";
         expresion = result.toString();
         screen.textContent = result;
     } catch (error) {
-        // Maneja errores si la expresión no es válida
         screen.textContent = "Error";
     }
 });
@@ -98,7 +119,7 @@ raiz.addEventListener("click", () => {
 signe.addEventListener("click", () => {
     try {
         const number = Number(expresion);
-        const result = -1 * number;
+        result = -1 * number;
         expresion = result.toString();
         screen.textContent = result;
     } catch (error) {
@@ -107,11 +128,12 @@ signe.addEventListener("click", () => {
 });
 
 divi.addEventListener("click", () => {
-    try{
-        const result = Number(1 / eval(expresion));
+    try {
+        result = Number(1 / eval(expresion));
+        operation.textContent = "1/(" + expresion + ")";
         expresion = result.toString();
         screen.textContent = result;
-    } catch (error){
+    } catch (error) {
         screen.textContent0 = "Error";
     }
 

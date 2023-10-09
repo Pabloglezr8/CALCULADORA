@@ -19,7 +19,7 @@ body{
 
 .screen{
     text-align: right;
-    font-family:Verdana;
+    font-family:Arial;
     color: white;
     font-size: 50px;
     border: none;
@@ -39,7 +39,7 @@ body{
     width: 310px;
     height: 50px;
     font-size: 25px;
-    font-family: verdana;
+    font-family: Arial;
     text-align: right;
     color: rgb(174, 172, 172);
     white-space: nowrap; 
@@ -65,7 +65,7 @@ body{
     background-color: rgb(45, 45, 45);
 
 }
-/* rgb(31, 58, 83); */
+
 .tecla{
     margin: 2px;
     opacity: none;
@@ -73,8 +73,8 @@ body{
     background-color: rgb(50, 50, 50);
     border: solid;
     border-color: rgb(50, 50, 50);
-    font-family: Verdana;
-    font-size: 15px;
+    font-family: Arial;
+    font-size: 17px;
     border-radius: 3px;
     border: none;
     width: 80px;
@@ -101,8 +101,8 @@ body{
     background-color: rgb(69, 69, 69);
     border: solid;
     border-color: rgb(69, 69, 69);
-    font-family: Verdana;
-    font-size: 15px;
+    font-family: Arial;
+    font-size: 17px;
     border-radius: 3px;
     border: none;
     width: 80px;
@@ -129,8 +129,8 @@ body{
     background-color: rgb(69, 69, 69);
     border: solid;
     border-color: rgb(69, 69, 69);
-    font-family: Verdana;
-    font-size: 15px;
+    font-family: Arial;
+    font-size: 17px;
     border-radius: 3px;
     border: none;
     width: 80px;
