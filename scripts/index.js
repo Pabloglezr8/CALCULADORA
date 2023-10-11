@@ -1,3 +1,6 @@
+//Pablo Gonzalez Ruiz
+//https://github.com/Pabloglezr8/CALCULADORA.git
+
 let expresion = "";// alamcenamos las operaciones
 let result = "";// resultado de las operaciones
 let newOp = true;// validador de operacion nueva o no
@@ -29,9 +32,7 @@ const sign = document.getElementById("sign");// boton +/-
 
 const divi = document.getElementById("divi");// boton 1/x
 
-
-
-
+//funcion para el boton de borrado
 del.addEventListener("click", () => {
     if (expresion.length > 0) {
         expresion = expresion.slice(0, -1);
@@ -40,6 +41,7 @@ del.addEventListener("click", () => {
     }
 });
 
+//funcion para poner 3,14 como digito
 pi.addEventListener("click", () => {
     expresion += "3.14";
     operation.textContent = expresion;
@@ -47,6 +49,8 @@ pi.addEventListener("click", () => {
     console.log(operation.textContent);
 });
 
+
+//funcion para limpiar la pantalla y resultado igualarlo a 0
 clean.addEventListener("click", () => {
     screen.textContent = "0";
     expresion = ""; 
@@ -54,6 +58,7 @@ clean.addEventListener("click", () => {
     result = "";
 });
 
+//funcion para la inserccion de los operadores + - / *
 operators.forEach((operator) => {
     operator.addEventListener("click", () => {
         expresion += operator.textContent; 
@@ -63,6 +68,8 @@ operators.forEach((operator) => {
     });
 });
 
+
+//funcion para la insercción de números
 numbers.forEach((numbers) => {
     numbers.addEventListener("click", () => {
         if (result !== "0" && newOp) {
@@ -74,6 +81,7 @@ numbers.forEach((numbers) => {
     });
 });
 
+//funcion para obtener el resultado de las operaciones
 equal.addEventListener("click", () => {
     try {
         result = Number(eval(expresion).toFixed(2));
@@ -87,6 +95,7 @@ equal.addEventListener("click", () => {
     }
 });
 
+//funcion para dividir entre 100
 porcent.addEventListener("click", () => {
     try {
         result = Number(eval(expresion) / 100);
@@ -97,7 +106,7 @@ porcent.addEventListener("click", () => {
     }
 });
 
-
+//funcion para calcular la potencia cuadrada de un número
 exp.addEventListener("click", () => {
     try {
         result = Number(eval(Math.pow(expresion, 2)));
@@ -109,6 +118,7 @@ exp.addEventListener("click", () => {
     }
 });
 
+//funcion para calcular la raiz cuadrada de un numero
 raiz.addEventListener("click", () => {
     try {
         result = Number(eval(Math.sqrt(expresion)));
@@ -120,6 +130,7 @@ raiz.addEventListener("click", () => {
     }
 });
 
+//funcion para cambiar el signo de los número
 sign.addEventListener("click", () => {
     try {
         const number = Number(expresion);
@@ -131,6 +142,7 @@ sign.addEventListener("click", () => {
     }
 });
 
+//funcion para dividir 1 entr el número
 divi.addEventListener("click", () => {
     try {
         result = Number(1 / eval(expresion));
